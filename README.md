@@ -50,16 +50,20 @@ This sandbox mimics a real-world enterprise architecture:
 
 ### Identity Cubes & Correlation
 ![Identity Cubes](docs/images/identity_cubes.png)
+
 *Successfully aggregating and correlating HR data into SailPoint Identity Cubes.*
 
 ### Provisioning Policies & Form Configuration
 ![Provisioning Policy](docs/images/provisioning_policy.png)
+
 *Configuring dynamic field dependencies for Birthright Provisioning Forms.*
 
 ### Attribute Synchronization
 ![Attribute Sync](docs/images/attribute_sync.png)
+
 *Testing Identity Attribute Synchronization from HR sources to downstream Active Directory targets.*
 
 ### Automated Leaver Provisioning Request
 ![Leaver Success](docs/images/leaver_success.png)
+
 *The final result: SailPoint automatically generating a Leaver Request to strip the user's Manager Access role and queueing their downstream accounts for deletion upon termination.*
