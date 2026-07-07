@@ -47,9 +47,18 @@ This sandbox mimics a real-world enterprise architecture:
 **Solution**: By directly analyzing the `spt_identity` and `spt_task_definition` tables in the backend MySQL database using standard SQL queries, I discovered that the `Aggregate Employees` task was successfully flipping the `inactive` attribute, but the subsequent `Refresh with Process Events` task was missing the trigger. I navigated to the Global Settings -> Rapid Setup Configuration and discovered the Leaver Processing trigger was missing its explicit attribute mapping (`Inactive -> Changed To -> True`). Once configured and the Identity Operations Terminate flow was linked to the LDAP Application settings, the Leaver Request generated flawlessly.
 
 ## 📸 Visual Proof
-### Rapid Setup Leaver Configuration
-![Leaver Configuration](docs/images/leaver_config.png)
-*Configuring the automated trigger for employee terminations.*
+
+### Identity Cubes & Correlation
+![Identity Cubes](docs/images/identity_cubes.png)
+*Successfully aggregating and correlating HR data into SailPoint Identity Cubes.*
+
+### Provisioning Policies & Form Configuration
+![Provisioning Policy](docs/images/provisioning_policy.png)
+*Configuring dynamic field dependencies for Birthright Provisioning Forms.*
+
+### Attribute Synchronization
+![Attribute Sync](docs/images/attribute_sync.png)
+*Testing Identity Attribute Synchronization from HR sources to downstream Active Directory targets.*
 
 ### Automated Leaver Provisioning Request
 ![Leaver Success](docs/images/leaver_success.png)
