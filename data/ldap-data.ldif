@@ -1,0 +1,44 @@
+dn: ou=People,dc=training,dc=sailpoint,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=training,dc=sailpoint,dc=com
+objectClass: organizationalUnit
+ou: Groups
+
+dn: uid=anichols,ou=People,dc=training,dc=sailpoint,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+uid: anichols
+cn: Aaron Nichols
+sn: Nichols
+mail: anichols@example.com
+givenName: Aaron
+employeeNumber: E001
+
+dn: uid=slopez,ou=People,dc=training,dc=sailpoint,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+uid: slopez
+cn: Sandra Lopez
+sn: Lopez
+mail: slopez@example.com
+givenName: Sandra
+employeeNumber: E002
+
+dn: uid=jdoe,ou=People,dc=training,dc=sailpoint,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+uid: jdoe
+cn: John Doe
+sn: Doe
+mail: jdoe@example.com
+givenName: John
+employeeNumber: E003
+
+dn: cn=IT_Admins,ou=Groups,dc=training,dc=sailpoint,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: IT_Admins
+uniqueMember: uid=anichols,ou=People,dc=training,dc=sailpoint,dc=com
+uniqueMember: uid=jdoe,ou=People,dc=training,dc=sailpoint,dc=com

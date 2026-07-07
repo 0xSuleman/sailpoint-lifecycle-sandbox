@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Form PUBLIC "-//SailPoint//DTD Form 1.0//EN" "sailpoint.dtd">
+<Form name="Identity Create" type="CreateIdentity">
+  <Attributes>
+    <Map>
+      <entry key="pageTitle" value="Create Identity"/>
+    </Map>
+  </Attributes>
+  <Section name="Basic Information">
+    <Field name="firstname" type="string" displayName="First Name" required="true" postBack="true"/>
+    <Field name="lastname" type="string" displayName="Last Name" required="true" postBack="true"/>
+    <Field name="name" type="string" displayName="Username" required="true">
+      <Attributes>
+        <Map>
+          <entry key="dependencies">
+            <value>
+              <List>
+                <String>firstname</String>
+                <String>lastname</String>
+              </List>
+            </value>
+          </entry>
+        </Map>
+      </Attributes>
+      <Script>
+        <Source>
+          if (firstname != void &amp;&amp; lastname != void) {
+              return firstname.substring(0,1).toLowerCase() + lastname.toLowerCase();
+          }
+          return null;
+        </Source>
+      </Script>
+    </Field>
+    <Field name="password" type="secret" displayName="Password" required="true"/>
+    <Field name="passwordConfirm" type="secret" displayName="Confirm Password" required="true"/>
+    <Field name="manager" type="identity" displayName="Manager"/>
+    <Field name="location" type="string" displayName="Location" postBack="true">
+      <AllowedValuesDefinition>
+        <Value>
+          <List>
+            <String>Austin</String>
+            <String>London</String>
+            <String>Taipei</String>
+          </List>
+        </Value>
+      </AllowedValuesDefinition>
+    </Field>
+    <Field name="region" type="string" displayName="Region">
+      <Attributes>
+        <Map>
+          <entry key="dependencies">
+            <value>
+              <List>
+                <String>location</String>
+              </List>
+            </value>
+          </entry>
+        </Map>
+      </Attributes>
+      <Script>
+        <Source>
+          if ("Austin".equals(location)) return "Americas";
+          if ("London".equals(location)) return "EMEA";
+          if ("Taipei".equals(location)) return "Asia-Pacific";
+          return null;
+        </Source>
+      </Script>
+    </Field>
+    <Field name="type" type="string" displayName="Type">
+      <AllowedValuesDefinition>
+        <Value>
+          <List>
+            <String>employee</String>
+            <String>contractor</String>
+          </List>
+        </Value>
+      </AllowedValuesDefinition>
+    </Field>
+  </Section>
+</Form>

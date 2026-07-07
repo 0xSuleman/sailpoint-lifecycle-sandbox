@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Rule PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Rule language="beanshell" name="TRNG-GroupOwner-Department" type="GroupOwner">
+  <Description>Determine the owner of a department group.</Description>
+  <Signature returnType="sailpoint.object.Identity">
+    <Inputs>
+      <Argument name="factory">
+        <Description>The GroupFactory that generated the group.</Description>
+      </Argument>
+      <Argument name="group">
+        <Description>The GroupDefinition being created.</Description>
+      </Argument>
+    </Inputs>
+  </Signature>
+  <Source>
+    <![CDATA[
+      import sailpoint.object.Identity;
+      // Assign the administrator as the owner of all department groups
+      return context.getObjectByName(Identity.class, "spadmin");
+    ]]>
+  </Source>
+</Rule>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sailpoint PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<sailpoint><Rule language="beanshell" name="TRNG-JDBCProvision-TimeTracking" type="JDBCProvision"><Source>
+    import sailpoint.object.ProvisioningResult;
+    ProvisioningResult result = new ProvisioningResult();
+    result.setStatus(ProvisioningResult.STATUS_COMMITTED);
+    return result;
+    </Source></Rule><Rule language="beanshell" name="TRNG-JDBCProvision-Chat" type="JDBCProvision"><Source>
+    import sailpoint.object.ProvisioningResult;
+    ProvisioningResult result = new ProvisioningResult();
+    result.setStatus(ProvisioningResult.STATUS_COMMITTED);
+    return result;
+    </Source></Rule><Rule language="beanshell" name="TRNG-JDBCProvision-BugTracking" type="JDBCProvision"><Source>
+    import sailpoint.object.ProvisioningResult;
+    ProvisioningResult result = new ProvisioningResult();
+    result.setStatus(ProvisioningResult.STATUS_COMMITTED);
+    return result;
+    </Source></Rule></sailpoint>

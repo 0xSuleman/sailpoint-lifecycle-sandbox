@@ -1,0 +1,6 @@
+contractorId,firstName,lastName,managerId,fullName,email,department,region,location,inactiveUser,jobtitle,costcenter,workStatus
+C001,Allen,Burton,E001,Allen Burton,aburton@example.com,IT,Americas,Austin,FALSE,Contractor,IT-101,Active
+C002,Thomas,Martinez,E004,Thomas Martinez,tmartinez@example.com,Finance,EMEA,London,FALSE,Contractor,FIN-300,Active
+C002,Thomas,Martinez,E004,Thomas Martinez,tmartinez@example.com,Finance,EMEA,London,FALSE,Contractor,FIN-301,Active
+C003,Sarah,Connor,E001,Sarah Connor,sconnor@example.com,IT,Americas,Austin,TRUE,Contractor,IT-101,Inactive
+C004,Michael,Brooks,E004,Michael Brooks,mbrooks@example.com,Accounting,Asia-Pacific,Taipei,FALSE,Contractor,ACC-400,Active

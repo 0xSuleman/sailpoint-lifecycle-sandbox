@@ -1,0 +1,6 @@
+employeeId,firstName,lastName,managerId,fullName,email,department,region,location,inactiveUser,jobtitle,costcenter,workStatus
+E001,Aaron,Nichols,,Aaron Nichols,anichols@example.com,IT,Americas,Austin,FALSE,Engineer,IT-101;E22,Active
+E002,Sandra,Lopez,E001,Sandra Lopez,slopez@example.com,HR,Americas,Austin,TRUE,HR Rep,HR-200,Inactive
+E003,John,Doe,E001,John Doe,jdoe@example.com,IT,Americas,Austin,FALSE,Engineer,IT-101,Active
+E004,Jane,Smith,,Jane Smith,jsmith@example.com,Finance,EMEA,London,FALSE,Analyst,FIN-300,Active
+E006,Caroline,Martin II,E004,Caroline Martin II,cmartin2@example.com,Finance,Asia-Pacific,Taipei,TRUE,Analyst,FIN-300,Active
